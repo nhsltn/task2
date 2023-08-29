@@ -217,15 +217,15 @@ console.log("Hasil pangkat:", resultPower);
 // Fungsi untuk mengecek huruf vokal
 console.log("-------4. Cek Huruf Vokal:------:");
 function checkVowel(letter) {
-    const lowercaseLetter = letter.toLowerCase();
-    if (lowercaseLetter === 'a' || lowercaseLetter === 'e' || lowercaseLetter === 'i' || lowercaseLetter === 'o' || lowercaseLetter === 'u') {
+    const vowelPattern = /^[aeiou]$/i; // Pattern untuk huruf vokal (case insensitive)
+    if (vowelPattern.test(letter)) {
       return "Vokal";
     } else {
       return "Bukan Vokal";
     }
-}
+  }
 
-const letterToCheck = 'A';
+const letterToCheck = 'B';
 const vowelStatus = checkVowel(letterToCheck);
 console.log("Status huruf:", vowelStatus);
 
