@@ -233,7 +233,7 @@ const vowelStatus = checkVowel(letterToCheck);
 console.log("Status huruf:", vowelStatus);
 
 function calculator(operation, a, b) {
-  if (typeof a !== "number" || typeof b !== "number") {
+  if (isNaN(a) || isNaN(b)) {
     return "Input harus berupa angka";
   }
 
