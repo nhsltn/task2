@@ -233,6 +233,10 @@ const vowelStatus = checkVowel(letterToCheck);
 console.log("Status huruf:", vowelStatus);
 
 function calculator(operation, a, b) {
+  if (typeof a !== "number" || typeof b !== "number") {
+    return "Input harus berupa angka";
+  }
+
   if (operation === "add") {
     return a + b;
   } else if (operation === "subtract") {
@@ -240,9 +244,6 @@ function calculator(operation, a, b) {
   } else if (operation === "multiply") {
     return a * b;
   } else if (operation === "divide") {
-    if (b === 0) {
-      return "Tidak bisa membagi dengan nol";
-    }
     return a / b;
   } else if (operation === "power") {
     return Math.pow(a, b);
@@ -252,6 +253,8 @@ function calculator(operation, a, b) {
 }
 
 // Contoh penggunaan
+let awd = "sulton"; //untuk testing validasi
+console.log("Penjumlahan:", calculator("add", awd, num2));
 console.log("Penjumlahan:", calculator("add", num1, num2));
 console.log("Pengurangan:", calculator("subtract", num1, num2));
 console.log("Perkalian:", calculator("multiply", num3, num4));
