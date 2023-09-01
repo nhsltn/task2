@@ -35,6 +35,7 @@ console.log("Pangkat:", calculator("power", test, test1));
 // Arrow Function
 const celsiusToFahrenheit = (celcius) => (celcius * 9) / 5 + 32;
 
+// Currying
 const req = 1.8; // 9/32
 const req1 = 32;
 
@@ -45,6 +46,7 @@ const celsiusToFahrenheitCurried = (celcius) => {
     };
   };
 };
+
 console.log(celsiusToFahrenheitCurried(70)(req)(req1));
 
 console.log(celsiusToFahrenheit(70));
